@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'inter';
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    top: -10%;
+    opacity: 0;
+    transition: 2s;
+}
+#logo {
+    width: 48px;
+    margin-right: 30px;
+}
+nav > a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+nav.show {
+    opacity: 1;
+    top: 0%;
+}
+
+
+
+/* ///////// HEADER /////////// */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 14rem;
+}
+header h1 {
+    font-size: 68px;
+    font-weight: bold;
+    font-family: 'rowdies';
+    margin-bottom: 20px;
+}
+header p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+header .tombol a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+header .tombol a.kePasir {
+    background-color: black;
+    color: white;
+}
+
+header k1,
+header k2,
+header k3 {
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    transition: 1.5s;
+}
+header k1.show,
+header k2.show,
+header k3.show {
+    opacity: 1;
+    top: 0px;
+}
+
+
+header p h {
+    position: relative;
+    top: 80px;
+    opacity: 0;
+    transition: 1s;
+}
+header p h.show {
+    top: 0;
+    opacity: 1;
+}
+
+
+
+
+header .tombol .kePasir,
+header .tombol .keKendaraan {
+    opacity: 0;
+    position: relative;
+    top: 80px;
+    transition: 1s;
+}
+
+header .tombol .kePasir.show,
+header .tombol .keKendaraan.show {
+    opacity: 1;
+    top: 0;
+}
+
+
+
+
+
+
+/* ///////// PASIR ////////// */
+#pasir {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pasir h2 {
+    font-size: 40px;
+    font-family: 'rowdies';
+    margin-bottom: 2.5rem;
+}
+
+#pasir .wadah {
+    display: flex;
+    max-width: 1500px;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#pasir .wadah .item {
+    background-color: white;
+    color: black;
+    margin: 15px;
+    width: 30%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: color .2s ease, background-color .2s ease, opacity 1.5s ease, transform 1.5s ease;
+}
+#pasir .wadah .item .gambar {
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+    position: relative;
+    overflow: hidden;
+}
+#pasir .wadah .item .gambar .view-more {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    transition: .5s;
+}
+
+#pasir .wadah .item .isi {
+    padding: 30px;
+    font-weight: 300;
+}
+#pasir .isi h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#pasir .item:hover {
+    background-color: black;
+    color: white;
+}
+#pasir .item:hover .gambar .view-more {
+    top: 0%;
+}
+#pasir .wadah .item.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+/* //////////// KENDARAAN /////////// */
+#kendaraan {
+    padding-top: 7rem;
+}
+
+#kendaraan article {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+#kendaraan .poto {
+    width: 450px;
+    height: 300px;
+    margin-right: 50px;
+    background-color: gray;
+}
+#kendaraan .teks {
+    width: 700px;
+    padding-top: 3rem;
+}
+
+#kendaraan h2 {
+    font-size: 40px;
+    font-family: 'rowdies';
+    margin-bottom: 1rem;
+}
+
+#kendaraan .carry {
+    flex-direction: row-reverse;
+}
+#kendaraan .carry .poto {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
+
+
+#kendaraan .engkel .poto, 
+#kendaraan .carry .poto, 
+#kendaraan .truk .poto {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+#kendaraan .engkel.show .poto,
+#kendaraan .carry.show .poto,
+#kendaraan .truk.show .poto {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#kendaraan .engkel h2,
+#kendaraan .carry h2,
+#kendaraan .truk h2 {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s .5s;
+}
+#kendaraan .engkel.show h2,
+#kendaraan .carry.show h2,
+#kendaraan .truk.show h2 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#kendaraan .engkel p,
+#kendaraan .carry p,
+#kendaraan .truk p {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s .8s;
+}
+#kendaraan .engkel.show p,
+#kendaraan .carry.show p,
+#kendaraan .truk.show p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+/* //////////// KONTAK /////////// */
+#kontak {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    height: 125px;
+    width: 200px;
+    opacity: 0;
+    transition: 1.5s;
+}
+#kontak.show {
+    opacity: 1;
+}
+#kontak img {
+    width: 48px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+#kontak .batas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    overflow: hidden;
+}
+#kontak .nomer {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+}
+#kontak .nomer.show {
+    top: 0px;
+}
+#kontak .nomer a {
+    background-color: white;
+    padding: 6px 20px;
+    color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin: 4px 0;
+    font-size: 14px;
+    transition: .2s;
+}
+#kontak .nomer a:hover {
+    background-color: black;
+    color: white;
+}
+
+
