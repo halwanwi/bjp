@@ -51,7 +51,7 @@ $(document).ready(function () {
     // nav muncul
     setTimeout(() => {
         $('nav').addClass('show');
-    }, 2800);
+    }, 3500);
 
     // ini jeda animasi buat kata BINTANG JAYA PASIR
     setTimeout(() => {

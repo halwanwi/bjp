@@ -109,7 +109,7 @@ header .tombol .keKendaraan {
     opacity: 0;
     position: relative;
     top: 80px;
-    transition: 1s;
+    transition: 1.2s ease-out;
 }
 
 header .tombol .kePasir.show,
