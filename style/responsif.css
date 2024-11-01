@@ -1,0 +1,162 @@
+nav .box a {
+    color: white;
+    margin-right: 20px;
+}
+#menu {
+    width: 24px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media screen and (max-width: 1279px) {}
+@media screen and (max-width: 1150px) {
+    #pasir .wadah {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1023px) {
+    #pasir .wadah .item {
+        width: 40%;
+    }
+
+    #kendaraan .poto {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 959px) {}
+@media screen and (max-width: 767px) {
+    header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    header h1 {
+        font-size: 56px;
+        text-align: center;
+    }
+    header p {
+        text-align: center;
+    }
+
+    #pasir .wadah {
+        width: 100%;
+    }
+    #pasir .wadah .item {
+        width: 43%;
+    }
+}
+@media screen and (max-width: 639px) {
+    /* nav menu */
+    #menu {
+        display: block;
+    }
+    nav .box {
+        position: absolute;
+        right: -205px;
+        top: 70px;
+        height: 100vh;
+        width: 80%;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+        background-color: white;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1) 1s;
+    }
+    nav .box a {
+        color: black;
+        font-size: 18px;
+        margin: 0;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    nav .box a:hover {
+        background-color: black;
+        color: white;
+    }
+    nav .box a:first-child {
+        border-top: 2px solid rgba(0, 0, 0, 0.24);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+    }
+    nav .box a:last-child {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+    }
+    nav .box.show {
+        right: 0;
+    }
+
+
+
+
+
+
+    #pasir .wadah .item {
+        width: 90%;
+    }
+
+    #kendaraan article, #kendaraan article.carry {
+        flex-direction: column;
+    }
+    #kendaraan article .poto, #kendaraan article.carry .poto {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    #kendaraan article .teks {
+        width: 100%;
+        text-align: center;
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid black;
+    }
+}
+@media screen and (max-width: 479px) {
+    header h1 {
+        font-size: 48px;
+    }
+
+    #pasir h2,
+    #kendaraan h2 {
+        font-size: 36px;
+    }
+
+    #pasir .isi h3 {
+        font-size: 20px;
+    }
+
+
+    #kendaraan article {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 350px) {
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    header h1 {
+        font-size: 36px;
+    }
+    header .tombol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #pasir h2,
+    #kendaraan h2 {
+        font-size: 28px;
+    }
+
+
+    #kendaraan article .poto {
+        height: 200px;
+    }
+}
+

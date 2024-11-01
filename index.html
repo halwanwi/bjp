@@ -7,12 +7,22 @@
 
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsif.css">
 </head>
 <body>
     <nav>
-        <img src="asset/logo-eltartil.png" alt="logo" id="logo">
-        <a class="keHome">Beranda</a>
-        <a class="kePasir">Pasir</a>
+        <a class="keHome">
+            <img src="asset/logo-eltartil.png" alt="logo" id="logo">
+        </a>
+        
+        <div class="box">
+            <a class="keHome">Beranda</a>
+            <a class="kePasir">Pasir</a>
+        </div>
+
+        <img src="asset/menu.png" alt="menu-mobile" id="menu">
+        <!-- <img src="asset/more.png" alt="menu-mobile" id="menu"> -->
+        <!-- <img src="asset/three-dots.png" alt="menu-mobile" id="menu"> -->
     </nav>
 
     <header id="home">
@@ -118,5 +128,6 @@
 
     <script src="script/jq.js"></script>
     <script src="script/kontrol.js"></script>
+    <script src="script/mobile-nav.js"></script>
 </body>
 </html>
